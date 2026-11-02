@@ -1,0 +1,13 @@
+# Operating system metadata and macOS resource-fork sidecars
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
+# Local research papers: keep the originals on disk and publish source links
+/efficient_join.pdf
+/graph_neural_networks.pdf
+/learned_optimizer.pdf
+/learned_theory_optimizer.pdf
+/reinforcemnet_learning.pdf
+/tree_transformer.pdf
