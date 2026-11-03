@@ -4,10 +4,8 @@
 Thumbs.db
 Desktop.ini
 
-# Local research papers: keep the originals on disk and publish source links
+# JOGGER: the PDF's ACM notice requires permission for server posting
 /efficient_join.pdf
-/graph_neural_networks.pdf
-/learned_optimizer.pdf
-/learned_theory_optimizer.pdf
+
+# RTOS: permission for third-party reposting under IEEE policy is not established
 /reinforcemnet_learning.pdf
-/tree_transformer.pdf

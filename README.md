@@ -1,12 +1,14 @@
-# CS434 Reading List: Machine Learning for Database Systems
+# CS434 Research Papers: Machine Learning for Database Systems
 
-A reading list of six research papers on learned query optimization, join order
-selection, and query plan representation. Follow the official online links below
-to browse the papers without needing local files.
+A collection of research papers on learned query optimization, join order
+selection, and query plan representation. Four papers are included as PDFs; two
+are available through external links while redistribution permission is pending.
+The index provides citations and official sources for all six papers.
 
-This repository contains the reading guide and Git ignore rules. It contains no
-original implementations, notebooks, datasets, trained models, experiments, or
-reproduced results. Optional local PDF copies are kept outside Git.
+This repository contains research PDFs, this reading guide, and Git file rules.
+It contains no original implementations, notebooks, datasets, trained models,
+experiments, or reproduced results. The two excluded PDFs remain unchanged on
+the maintainer's computer.
 
 ## Paper index
 
@@ -22,6 +24,10 @@ Discovery and Data Mining* (KDD '22), pp. 97–107.
 and [KDD 2022 proceedings entry](https://kdd.org/kdd2022/toc.html).
 The proceedings page lists the paper under its full title.
 
+**Repository copy:** External links only. `efficient_join.pdf` is excluded because
+its ACM notice requires permission for posting on servers, and that permission
+has not been established.
+
 **Focus:** JOGGER uses graph representations and curriculum learning for join
 order selection.
 
@@ -35,6 +41,8 @@ Conference on Artificial Intelligence* (IJCAI-25), Survey Track, pp. 10555–105
 **Official link:** [IJCAI publication page](https://ijcai.org/proceedings/2025/1172).
 DOI: `10.24963/ijcai.2025/1172`.
 
+**Repository copy:** [graph_neural_networks.pdf](graph_neural_networks.pdf).
+
 **Focus:** A survey of graph neural network applications in relational and graph
 databases.
 
@@ -47,6 +55,9 @@ pp. 1777–1789.
 
 **Official link:** [VLDB publisher PDF](https://www.vldb.org/pvldb/vol16/p1777-gao.pdf).
 DOI: `10.14778/3587136.3587150`.
+
+**Repository copy:** [learned_optimizer.pdf](learned_optimizer.pdf), under the
+CC BY-NC-ND 4.0 notice printed in the paper.
 
 **Focus:** Learned join ordering and physical operator restrictions for robust
 query plan generation.
@@ -62,6 +73,9 @@ pp. 1705–1718.
 **Official link:** [VLDB publisher PDF](https://www.vldb.org/pvldb/vol12/p1705-marcus.pdf).
 DOI: `10.14778/3342263.3342644`.
 
+**Repository copy:** [learned_theory_optimizer.pdf](learned_theory_optimizer.pdf),
+under the CC BY-NC-ND 4.0 notice printed in the paper.
+
 **Focus:** Neural query optimization that learns from execution feedback.
 
 ### 5. Reinforcement Learning with Tree-LSTM for Join Order Selection
@@ -73,6 +87,10 @@ DOI: `10.14778/3342263.3342644`.
 
 **Official link:** [IEEE Computer Society proceedings PDF](https://conferences.computer.org/icde/2020/pdfs/ICDE2020-5acyuqhpJ6L9P042wmjY1p/290300b297/290300b297.pdf).
 DOI: `10.1109/ICDE48307.2020.00116`.
+
+**Repository copy:** External link only. `reinforcemnet_learning.pdf` is excluded
+until permission for third-party reposting is established under IEEE's posting
+policy. No open redistribution license was found in the local PDF.
 
 **Focus:** RTOS combines tree representations and reinforcement learning for join
 order selection.
@@ -86,6 +104,9 @@ pp. 1658–1670.
 
 **Official link:** [VLDB publisher PDF](https://www.vldb.org/pvldb/vol15/p1658-zhao.pdf).
 DOI: `10.14778/3529337.3529349`.
+
+**Repository copy:** [tree_transformer.pdf](tree_transformer.pdf), under the
+CC BY-NC-ND 4.0 notice printed in the paper.
 
 **Focus:** Tree-structured Transformers for query plan encoding.
 
@@ -106,39 +127,42 @@ proceedings entry; the KDD entry was accessible. The other five official source
 links were accessible during verification. Publisher access policies may differ
 for individual readers.
 
-## Contents and optional local reading
+## Repository contents and reading the PDFs
 
 | Path | Role | Included in Git? |
 | --- | --- | --- |
 | `README.md` | Paper citations, reading guide, and scope | Yes |
-| `.gitignore` | Exact PDF exclusions and operating system metadata exclusions | Yes |
-| `efficient_join.pdf` | Local JOGGER copy, 11 pages | No |
-| `graph_neural_networks.pdf` | Local GNN survey copy, 9 pages | No |
-| `learned_optimizer.pdf` | Local LOGER copy, 13 pages | No |
-| `learned_theory_optimizer.pdf` | Local Neo copy, 14 pages | No |
-| `reinforcemnet_learning.pdf` | Local RTOS copy, 12 pages | No |
-| `tree_transformer.pdf` | Local QueryFormer copy, 13 pages | No |
+| `.gitignore` | Two specific paper exclusions and operating system metadata exclusions | Yes |
+| `.gitattributes` | Keeps PDFs binary, without text conversion or text diffs | Yes |
+| `efficient_join.pdf` | JOGGER, 11 pages; permission pending | No; external links only |
+| `graph_neural_networks.pdf` | GNN survey, 9 pages | Yes |
+| `learned_optimizer.pdf` | LOGER, 13 pages | Yes |
+| `learned_theory_optimizer.pdf` | Neo, 14 pages | Yes |
+| `reinforcemnet_learning.pdf` | RTOS, 12 pages; permission pending | No; external link only |
+| `tree_transformer.pdf` | QueryFormer, 13 pages | Yes |
 
-The six existing PDFs are preserved locally and ignored by Git. A clone of this
-repository will not include them. Original filenames are unchanged, including
-the spelling of `reinforcemnet_learning.pdf`.
+All six original PDFs are preserved locally without changes. Only JOGGER and
+RTOS are ignored by Git. The other four PDFs are selected for inclusion in the
+public repository. Original filenames are unchanged, including the spelling of
+`reinforcemnet_learning.pdf`.
 
-If you already have the local copies, open them with any PDF reader. For example,
-from this folder on macOS:
+Use the repository PDF links in the index to read the four included papers on
+GitHub. Use the official online links for the two excluded papers. As an optional
+way to read a downloaded copy on macOS, run this command from the project folder:
 
 ```sh
-open efficient_join.pdf
+open graph_neural_networks.pdf
 ```
 
-This optional command opens the local paper and generates no project output.
-Online reading requires only a browser; there are no dependencies to install,
+This command opens the survey and generates no project output. Reading requires
+only a browser or PDF reader; there are no dependencies to install,
 environment variables to configure, build steps, or automated tests.
 
 ## Data and reproducibility
 
 The papers discuss benchmarks such as JOB, TPC-H, and TPC-DS. Their datasets,
 database setup, training code, and experiment configurations are not included in
-this reading list. Reproducing a paper's experiments requires the corresponding
+this collection. Reproducing a paper's experiments requires the corresponding
 authors' implementations, data, and instructions. This repository has no data
 processing pipeline and generates no reports, figures, or model checkpoints.
 The papers' experimental results have not been reproduced or independently
@@ -146,9 +170,28 @@ verified here.
 
 ## Licensing
 
-Third-party papers are linked from their official sources and are not distributed
-by this repository. Their copyrights and license terms remain with their
-respective rights holders; no license is assigned to them here.
+The papers retain their original copyrights and terms. This repository does not
+assign a new license to third-party material. Citations, authors, and official
+source links are provided in the index. The included PDFs are the existing local
+copies, unchanged by this repository preparation, with their original notices
+retained.
+
+| File | Redistribution basis or remaining issue |
+| --- | --- |
+| `graph_neural_networks.pdf` | Copyright holder: [IJCAI Organization](https://ijcai.org/contact/). Its proceedings policy permits republishing with a visible reference and link to IJCAI; both are provided above and here. |
+| `learned_optimizer.pdf` | The paper states CC BY-NC-ND 4.0; included with attribution for noncommercial sharing without adaptations. |
+| `learned_theory_optimizer.pdf` | The paper states CC BY-NC-ND 4.0; included with attribution for noncommercial sharing without adaptations. |
+| `tree_transformer.pdf` | The paper states CC BY-NC-ND 4.0; included with attribution for noncommercial sharing without adaptations. |
+| `efficient_join.pdf` | Excluded: its ACM notice requires permission for posting on servers. Permission has not been established. |
+| `reinforcemnet_learning.pdf` | Excluded: no open redistribution license was found in the local copy, and IEEE's conference-paper posting policy requires permission for third-party reuse. Permission has not been established. |
+
+The three VLDB papers retain their existing
+[CC BY-NC-ND 4.0 terms](https://creativecommons.org/licenses/by-nc-nd/4.0/): credit
+the authors, retain the license link and notices, use them only for noncommercial
+purposes, and do not distribute adaptations. RTOS remains linked to the official
+publisher copy under
+[IEEE's conference-paper posting policy](https://conferences.ieeeauthorcenter.ieee.org/get-published/post-your-paper/).
+The IJCAI and IEEE policy pages were checked on 2026-11-02.
 
 No license has been selected for the original documentation. Choosing a license
 for that documentation is an optional future decision for the repository owner.
